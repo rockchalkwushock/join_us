@@ -6,7 +6,7 @@ module.exports = {
   scripts: {
     clean: series(rimraf('coverage')),
     commit: 'git cz',
-    default: 'nps',
+    default: 'nodemon index.js',
     lint: {
       default: 'eslint src',
       fix: series.nps('lint --fix')
