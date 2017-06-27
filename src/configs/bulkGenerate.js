@@ -42,7 +42,9 @@ for (let i = 0; i < 500; i++) {
 const values = new Inserts('${email}, ${created_at}', d)
 
 db.none('DROP TABLE people;')
-db.none('CREATE TABLE people(email VARCHAR(255), created_at TIMESTAMP);')
+db.none(
+  'CREATE TABLE people(id SERIAL PRIMARY KEY, email VARCHAR(255), created_at TIMESTAMP);'
+)
 db
   .none('INSERT INTO people (email, created_at) VALUES $1;', values)
   .then(() => {
