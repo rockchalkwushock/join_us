@@ -7,6 +7,7 @@ module.exports = {
     clean: series(rimraf('coverage')),
     commit: 'git cz',
     default: 'nodemon index.js',
+    generate: 'node src/configs/bulkGenerate.js',
     lint: {
       default: 'eslint src',
       fix: series.nps('lint --fix')

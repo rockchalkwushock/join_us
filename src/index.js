@@ -1,8 +1,19 @@
-import Sequelize from 'sequelize'
+/* eslint-disable no-console */
 
-const connection = new Sequelize('join_us', 'rockchalkwushock', 'password', {
-  dialect: 'postgres',
-  host: 'localhost'
+import Express from 'express'
+
+import { middlewares } from './configs'
+
+const MODE = process.env.MODE || 'development'
+const PORT = process.env.PORT || 3000
+
+const app = new Express()
+
+middlewares(app)
+
+app.listen(PORT, err => {
+  if (err) throw err
+  console.log(`
+    App running on: ${PORT} in ${MODE}.
+  `)
 })
-
-connection.sync().then(() => {}).catch(e => console.log(e))
