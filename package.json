@@ -8,7 +8,6 @@
   "main": "index.js",
   "scripts": {
     "commit": "nps commit",
-    "bulkCreate": "nps generate",
     "precommit": "lint-staged",
     "prettier": "prettier --single-quote --print-width 80 --trailing-comma all --no-semi --use-tabs",
     "start": "nps",
@@ -45,6 +44,7 @@
     "body-parser": "~1.17.2",
     "compression": "~1.6.2",
     "cors": "~2.8.3",
+    "ejs": "~2.5.6",
     "express": "~4.15.3",
     "faker": "~4.1.0",
     "helmet": "~3.6.1",

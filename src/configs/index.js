@@ -1,3 +1,4 @@
+import db from './database'
 import middlewares from './middlewares'
 
-export { middlewares }
+export { db, middlewares }
