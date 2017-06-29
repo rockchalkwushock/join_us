@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "license": "MIT",
   "author": "Cody Brunner <rockchalkwushock@icloud.com> (https://rcws-development.com)",
-  "repository": "",
+  "repository": "https://github.com/rockchalkwushock/join_us.git",
   "description": "SQL Tut Web Application",
   "main": "index.js",
   "scripts": {
